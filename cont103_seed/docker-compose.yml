@@ -1,0 +1,29 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    volumes:
+      - psgl_data:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: '${POSTGRES_USER}'
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: '${POSTGRES_USER}'
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
+    volumes:
+      - ./myapp:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+volumes:
+  psgl_data:
