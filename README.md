@@ -24,6 +24,7 @@ Python Flask 動作確認
 
 ### bootstrap01_seed
 Bootstrap5 でページ作成
-
+- このページを Bootstrap5 対応に書き換えた  
+https://shimotmk.com/BootStrap-YouTube-lp/
 
 
