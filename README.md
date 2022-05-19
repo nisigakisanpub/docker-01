@@ -22,6 +22,8 @@ docker で Rails 環境構築
 Python Flask 動作確認
 - WSL2 内の Ubuntu 内の docker で動かすのはナンセンスと知った
 
+### bootstrap01_seed
+Bootstrap5 でページ作成
 
 
 
